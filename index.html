@@ -1,4 +1,63 @@
-<!doctype html>
-<html>
-<h1>Hello Himanshu!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="axiosTraial.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    <script>
+
+        function f() {
+            console.log(document.getElementById("pl-video-table").rows)
+            let i=0;
+            for(i=0;i<10;i++) {
+                console.log(document.getElementById("pl-video-table").rows[i].cells[6].firstElementChild.firstElementChild.firstElementChild.textContent);
+            }
+            console.log(i);
+        }
+    </script>
+    <script>
+        function f1() {
+            console.log("Himanshu")
+            let request=new XMLHttpRequest();
+            let uri="https://www.youtube.com/playlist?list=PLWPirh4EWFpHy-8X1CR3nmUiT2vFcZhso";
+            request.open("GET",uri);
+            request.send();
+            request.onload=()=>{
+                console.log(request);
+                if(request.status===200){
+                    console.log(request.response);
+                    document.getElementById("src").innerHTML=request.response;
+                }
+                else{
+                    console.log("error")
+                }
+            }
+        }
+    </script>
+    <script>
+        function f2() {
+            var API_ENDPOINT = "https://www.youtube.com/playlist?list=PLWPirh4EWFpHy-8X1CR3nmUiT2vFcZhso";
+
+                $.ajax({
+                    url: API_ENDPOINT,
+                    type: 'POST',
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (response) {
+                        console.log(response);
+                        document.getElementById("src").innerHTML=response;
+                    },
+                    error: function () {
+                        alert("error");
+                    }
+                });
+            }
+    </script>
+</head>
+<body>
+ <div id="src"></div>
+ <div>
+     <button onclick="f2()">Click</button>
+ </div>
+</body>
 </html>
