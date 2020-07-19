@@ -1,63 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="axiosTraial.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-    <script>
-
-        function f() {
-            console.log(document.getElementById("pl-video-table").rows)
-            let i=0;
-            for(i=0;i<10;i++) {
-                console.log(document.getElementById("pl-video-table").rows[i].cells[6].firstElementChild.firstElementChild.firstElementChild.textContent);
-            }
-            console.log(i);
-        }
+    <title>my website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
-    <script>
-        function f1() {
-            console.log("Himanshu")
-            let request=new XMLHttpRequest();
-            let uri="https://www.youtube.com/playlist?list=PLWPirh4EWFpHy-8X1CR3nmUiT2vFcZhso";
-            request.open("GET",uri);
-            request.send();
-            request.onload=()=>{
-                console.log(request);
-                if(request.status===200){
-                    console.log(request.response);
-                    document.getElementById("src").innerHTML=request.response;
-                }
-                else{
-                    console.log("error")
-                }
-            }
-        }
-    </script>
-    <script>
-        function f2() {
-            var API_ENDPOINT = "https://www.youtube.com/playlist?list=PLWPirh4EWFpHy-8X1CR3nmUiT2vFcZhso";
-
-                $.ajax({
-                    url: API_ENDPOINT,
-                    type: 'POST',
-                    contentType: 'application/json; charset=utf-8',
-                    success: function (response) {
-                        console.log(response);
-                        document.getElementById("src").innerHTML=response;
-                    },
-                    error: function () {
-                        alert("error");
-                    }
-                });
-            }
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
     </script>
 </head>
+    
 <body>
- <div id="src"></div>
- <div>
-     <button onclick="f2()">Click</button>
- </div>
+    <header class="header">
+        <nav class="navbar navbar-style">
+            <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+                
+            <div class="collapse navbar-collapse" id="micon">
+            <ul class="nav navbar-nav navbar-right">
+                <li> <a href="">Home</a> </li>
+                <li> <a href="">Aboutme</a> </li>
+                <li> <a href="">MyWork</a> </li>
+                <li> <a href="">Feedback</a> </li>
+            </ul>
+            </div>
+                </div>
+                </nav>
+            
+                <div class="container">
+                <div class="row">
+                    
+                <div class="col-sm-6">
+                    <p class="big-text">Himanshu Kumar</p>
+                    <p>Software Developer | Competitive Programmer</p>
+                    <a class="btn btn-first" href="#">Download CV</a>
+                    
+                    <p class="contact-me">Contact Me</p>
+                    <p>You can contact me </p>
+                        <ul class="cont">
+                            <li> <a href="">himanshukumar52525@gmail.com</a> </li>
+                            <li> <a href="">6393799382</a> </li>
+                            <li> Address: 21/3/41 agra road mulund gachhibowli</li>
+                        </ul>      
+    
+                    
+                    </div>     
+                    <div class="col-sm-6">
+                    <img src="intview.png" class="img-responsive">
+                    </div>
+                    
+                    </div>
+        </div>
+    </header>
+
 </body>
 </html>
