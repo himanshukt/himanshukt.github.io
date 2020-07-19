@@ -1,0 +1,76 @@
+
+*{
+margin: 0;
+padding: 0;
+}
+
+.header
+{
+height: 100vh;
+}
+
+.navbar-style
+{
+box-shadow: 0 5px 10px #efefef;
+    text-transform: uppercase;
+}
+
+.logo
+{
+    height: 70px;
+    padding: 5px 10px;
+}
+
+.icon-bar
+{
+    background: darkorange;
+}
+
+.big-text
+{
+    font-size: 52px;
+    margin: 20px 0;
+    color: aquamarine;
+}
+.small-text
+{
+    font-size: 22px;
+    margin: 20px 0;
+    color: black;
+}
+
+.contact-me
+{
+    font-size: 30px;
+    margin: 20px 0;
+    color: aquamarine
+}
+
+.img-responsive
+{
+    width: 100%;
+    height: 100%;
+}
+
+a.btn
+{
+    margin: 30px 10px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+a.btn-first
+{
+    background-color: darkgreen;
+    color: #fff;
+}
+
+a.btn:hover
+{
+    background-color: darkorange;
+    border: none;
+    color: #fff;
+    box-shadow: 5px 5px 10px #999;
+    transition: 0.3s
+}
