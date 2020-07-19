@@ -2,35 +2,34 @@
 *{
 margin: 0;
 padding: 0;
+
+}
+body{
+    background-color: rgb(160, 137, 137);
 }
 
-.header
-{
-height: 100vh;
+.header{
+height: 20%;
 }
 
-.navbar-style
-{
+.navbar-style{
 box-shadow: 0 5px 10px #efefef;
     text-transform: uppercase;
 }
 
-.logo
-{
+.logo{
     height: 70px;
     padding: 5px 10px;
 }
 
-.icon-bar
-{
+.icon-bar{
     background: darkorange;
 }
 
-.big-text
-{
+.big-text{
     font-size: 52px;
     margin: 20px 0;
-    color: aquamarine;
+    color:rgb(8, 8, 8);
 }
 .small-text
 {
@@ -39,11 +38,10 @@ box-shadow: 0 5px 10px #efefef;
     color: black;
 }
 
-.contact-me
-{
+.contact-me{
     font-size: 30px;
     margin: 20px 0;
-    color: aquamarine
+    color: rgb(56, 46, 59)
 }
 
 .img-responsive
