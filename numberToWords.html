@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Decimal To Words</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    <script>
+        let API_ENDPOINT = "https://d8hwx3vq75.execute-api.ap-south-1.amazonaws.com/FirstStage"
+        function validate() {
+            let number=document.getElementById('number').value;
+            let reg=/^[0-9]+$/;
+            if(reg.test(number)){
+                console.log("passed")
+                getInWords(number);
+            }
+            else{
+                console.log('not passed')
+                document.getElementById("inWords").textContent=`Please Enter a valid input`
+            }
+        }
+        function getInWords(number){
+            let inputData = {
+                "num":number
+            };
+            $.ajax({
+                url: API_ENDPOINT,
+                type: 'POST',
+                data:  JSON.stringify(inputData)  ,
+                contentType: 'application/json; charset=utf-8',
+                success: function (response) {
+                     document.getElementById("inWords").textContent= number +" : " + response ;
+                    console.log(response)
+                },
+                error: function () {
+                    document.getElementById("inWords").textContent=`Please Enter Some valid input `;
+                }
+            });
+        }
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+    <h1>Convert Decimal To Words</h1>
+</div>
+    <div class="container">
+
+       Enter Number : <input type="text" id="number" placeholder="Enter a valid number">
+        <br/><br/>
+        <div>
+            <textarea cols="70" rows="5" id="inWords" readonly></textarea>
+        </div>
+        <button type="button" class="btn btn-success" onclick="validate()">Convert</button>
+    </div>
+</body>
+</html>
