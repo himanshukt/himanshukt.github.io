@@ -59,16 +59,40 @@
                 </div>
 
                 <div class="col-lg-8">
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-                        
+                    <p>
+                        <strong>B.Tech (Computer Science and Engineering)</strong> professional with <span id="experienceYears"></span> years
+                        of experience in Software Development. Experienced in end-to-end development of software products from requirement analysis
+                        to system study, designing, coding, testing, debugging, documentation, deployment, and maintenance.
                     </p>
+                
+                    <script>
+                        // Calculate the years of experience dynamically
+                        var startDate = new Date('2019-06'); // Replace 'YYYY-MM' with the start date of experience in 'YYYY-MM' format
+                        var currentDate = new Date();
+                        var experienceYears = (currentDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25); // Approximate calculation for years
+                        document.getElementById('experienceYears').innerText = experienceYears.toFixed(1);
+                    </script>
+
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <ul>
                                 <li>Name: Himanshu Kumar</li>
                                 <li>Age: 27</li>
-                                <li>Occupation: Software Developer</li>
-
+                                <li>Occupation:Senior Software Engineer </li>
+                            </ul>
+                            <h7>Key Skills : </h7>
+                            <ul>
+                                <li>Full Stack Development</li>
+                                <li>Agile Methodologies</li>
+                                <li>Problem-Solving</li>
+                                <li>Technical Proficiencies:</li>
+                                <ul>
+                                    <li>Languages: Java, JavaScript, Python, SQL</li>
+                                    <li>Frontend: HTML5, CSS3, JavaScript (React, Angular)</li>
+                                    <li>Backend: Node.js, Spring Boot, Django</li>
+                                    <li>Databases: MySQL, MongoDB, PostgreSQL</li>
+                                    <li>Tools: Git, Docker, Jenkins, JIRA</li>
+                                </ul>
                             </ul>
                         </div>
                         <div class="col-md-6">
@@ -76,8 +100,8 @@
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        </p>
+                       <div id ='to do'></div>
+                      
                     </div>
                 </div>
             </div>
