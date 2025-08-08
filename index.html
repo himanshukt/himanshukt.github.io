@@ -1,320 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Himanshu Kumar Portfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- linking css file -->
-  <link rel="stylesheet" href="style.css">
-  <!-- bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Himanshu Kumar - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+<body class="bg-gray-900 text-white">
 
-<body> 
-    <!-- load javascript after loading all html content -->
-    <script src="script/script.js"></script>
-    <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
-      <div class="container">
-          <a class="navbar-brand" href="#">Himanshu</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#about">About</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#services">Services</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#portfolio">Portfolio</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#contact">Contact</a>
-                  </li>
-              </ul>
-              
-          </div>
-      </div>
-  </nav>
-</section>
-
-<!-- about section-->
-    <section id="about">
-        <div class="container mt-4 pt-4">
-            <h1 class="text-center">About Me</h1>
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <img src="images/aboutme.jpg" class= "imageAboutPage" alt="">
-                </div>
-
-                <div class="col-lg-8">
-                    <p> Dedicated and seasoned <strong>B.Tech (Computer Science and Engineering)</strong> professional with <span id="experienceYears"></span> years of hands-on experience in the dynamic 
-                        realm of Software Development. Proficient in spearheading end-to-end development cycles of cutting-edge software products, encompassing 
-                        meticulous requirement analysis, robust system study, innovative design conceptualization, efficient coding, rigorous testing, meticulous 
-                        debugging, comprehensive documentation, seamless deployment, and ongoing maintenance.
-                    </p>
-                    <script>
-                        var startDate = new Date('2019-06');
-                        var currentDate = new Date();
-                        var experienceYears = (currentDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25); 
-                        document.getElementById('experienceYears').innerText = experienceYears.toFixed(1);
-                    </script>
-
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Name: Himanshu Kumar</li>
-                                <li>Occupation:Senior Software Engineer </li>
-                                <li>More Details: <a href="https://www.linkedin.com/in/himanshukt/">LinkedIn Profile</a></li>
-                                
-                            </ul>
-                            <h7>Key Skills : </h7>
-                            <ul>
-                                <li>Full Stack Development</li>
-                                <li>Agile Methodologies</li>
-                                <li>Problem-Solving</li>
-                                <li>Technical Proficiencies:</li>
-                                <ul>
-                                    <li>Languages: Java, Python, SQL</li>
-                                    <li>Backend: Spring Boot,Kafka</li>
-                                    <li>Monitoring: Elastic, Logstah,Grafana,Kibana</li>
-                                    <li>Databases: SQL,Aerospike,Redis </li>
-                                    <li>Tools: Git, Docker, Jenkins, JIRA</li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                       <div id ='to do'></div>
-                      
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- services section-->
-    <section id="services">
-      <div class="container">
-          <h1 class="text-center">Services</h1>
-          <div class="row">
-              <div class="col-lg-4 mt-4">
-                  <div class="card servicesText">
-                      <div class="card-body">
-                          <i class="fas servicesIcon fa-clock"></i>
-                          <h4 class="card-title mt-3">Website Development</h4>
-                          <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                              Some quick example text to build on the card title and make up the bulk of the card's content.
-                          </p>
-                      </div>
-                  </div>  
-              </div>
-              <div class="col-lg-4 mt-4">
-                  <div class="card servicesText">
-                      <div class="card-body">
-                          <i class='fas servicesIcon fa-layer-group'></i>
-                          <h4 class="card-title mt-3">Website Design</h4>
-                          <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                              Some quick example text to build on the card title and make up the bulk of the card's content.
-                          </p>
-                      </div>
-                  </div>  
-              </div>
-
-              <div class="col-lg-4 mt-4">
-                  <div class="card servicesText">
-                      <div class="card-body">
-                          <i class='far servicesIcon fa-check-circle'></i>
-                          <h4 class="card-title mt-3">Website Deployment</h4>
-                          <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                              Some quick example text to build on the card title and make up the bulk of the card's content.
-                          </p>
-                      </div>
-                  </div>  
-              </div>
-          </div>
-
-          <div class="row">
-              <div class="col-lg-4 mt-4">
-                  <div class="card servicesText">
-                      <div class="card-body">
-                          <i class='fas servicesIcon fa-search'></i>
-                          <h4 class="card-title mt-3">SEO</h4>
-                          <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                              Some quick example text to build on the card title and make up the bulk of the card's content.
-                          </p>
-                      </div>
-                  </div>  
-              </div>
-
-              <div class="col-lg-4 mt-4">
-                  <div class="card servicesText">
-                      <div class="card-body">
-                          <i class='fas servicesIcon fa-shield-alt'></i>
-                          <h4 class="card-title mt-3">DevOps</h4>
-                          <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                              Some quick example text to build on the card title and make up the bulk of the card's content.
-                          </p>
-                      </div>
-                  </div>  
-              </div>
-
-              <div class="col-lg-4 mt-4">
-                  <div class="card servicesText">
-                      <div class="card-body">
-                          <i class='fas servicesIcon fa-wrench'></i>
-                          <h4 class="card-title mt-3">QA</h4>
-                          <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
-                              Some quick example text to build on the card title and make up the bulk of the card's content.
-                          </p>
-                      </div>
-                  </div>  
-              </div>
-          </div>
-      </div>
+  <!-- Hero -->
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-800 to-gray-900">
+    <img src="https://himanshukt.github.io/images/aboutme.jpg.jpg" alt="Profile" class="w-32 h-32 rounded-full border-4 border-indigo-500 mb-6" data-aos="zoom-in">
+    <h1 class="text-4xl font-bold mb-2" data-aos="fade-up">Himanshu Kumar</h1>
+    <p class="text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">Senior Java Backend Developer</p>
+    <a href="#projects" class="mt-6 px-6 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-full text-white font-semibold" data-aos="fade-up" data-aos-delay="200">View My Work</a>
   </section>
-  <!-- portfolio section-->
-  <section id="portfolio">
-    <div class="container mt-3">
-        <h1 class="text-center">Portfolio</h1>
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card">
-                    <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">YouTube Clone</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Quiz App</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- About -->
+  <section class="py-16 px-6 md:px-20 bg-gray-800" id="about">
+    <h2 class="text-3xl font-bold mb-6 text-center" data-aos="fade-up">About Me</h2>
+    <p class="max-w-3xl mx-auto text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+      Experienced backend engineer with expertise in Java 21, Spring Boot, Oracle DB, Elasticsearch, and distributed systems. 
+      Skilled in designing high-performance APIs, migrating legacy systems, and optimizing large-scale data operations. 
+      Proven track record with FASTag & PH platforms, Oracle CSV export of 90M+ records, SFTP utilities, Drools-based rule engines, and secure PGP encryption workflows.
+    </p>
+  </section>
 
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Product Landing Page</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Messaging Service</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Skills -->
+  <section class="py-16 px-6 md:px-20 bg-gray-900" id="skills">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up">Java 21</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="50">Spring Boot</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="100">Oracle DB</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="150">Elasticsearch</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="200">Docker</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="250">SFTP (Apache MINA)</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="300">PGP Encryption</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="350">Drools Engine</div>
+    </div>
+  </section>
 
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage1.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Twitter Clone</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 mt-4">
-                <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h4 class="card-title">Blog App</h4>
-                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success">Link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-<!-- contact section-->
-<section id="contact">
-  <div class="container mt-3 contactContent">
-      <h1 class="text-center">Contact Me</h1>
-
-      <div class="row mt-4">
-          <div class="col-lg-6">
-              <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-              <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
-                  <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
-                      <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=banglore&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
-                      </iframe>
-                  </div>
-                  <a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
-                  <style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
-                  </style>
-              </div>
-          </div>
-
-          <div class="col-lg-6">
-              <!-- form fields -->
-              <form>
-                  <input type="text" class="form-control form-control-lg" placeholder="Name">
-                  <input type="email" class="form-control mt-3" placeholder="Email">
-                  <input type="text" class="form-control mt-3" placeholder="Subject">
-                  <div class="mb-3 mt-3">
-                      <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
-                  </div>
-              </form>
-              <button type="button" class="btn btn-success mt-3">Contact Me</button>
-          </div>
+  <!-- Experience -->
+  <section class="py-16 px-6 md:px-20 bg-gray-800" id="experience">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Experience</h2>
+    <div class="space-y-8 max-w-3xl mx-auto">
+      <div data-aos="fade-up">
+        <h3 class="text-xl font-semibold">FASTag & PH Platform Development</h3>
+        <p class="text-gray-400">Migrated core systems to Java 21, implemented Vahan-based Tag Issuance, VRN history download, and DA processing.</p>
       </div>
-  </div>
-</section>
-
-<!-- footer section-->
-<footer id="footer">
-  <div class="container-fluid">
-      <!-- social media icons -->
-      <div class="social-icons mt-4">
-          <a href="https://m.facebook.com/profile.php?id=100004091362545" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/himanshukt" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold">Oracle Data Export</h3>
+        <p class="text-gray-400">Optimized batch data extraction of 90M+ records using JDBC multithreading & memory-safe streaming.</p>
       </div>
-  </div>
-</footer>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold">SFTP & File Processing</h3>
+        <p class="text-gray-400">Developed production-grade SFTP utilities with Apache MINA SSHD for secure large file transfers.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-semibold">Rule Engine Integration</h3>
+        <p class="text-gray-400">Implemented Drools for externalized fare calculation and flexible business rules management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="py-16 px-6 md:px-20 bg-gray-900" id="projects">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up">
+        <img src="https://himanshukt.github.io/images/fastag.jpg" alt="FASTag" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">FASTag System Migration</h3>
+        <p class="text-gray-400">Upgraded platform to Java 21, optimized for high transaction throughput (500+ RPS).</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://himanshukt.github.io/images/oracle_export.jpg" alt="Oracle Export" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Oracle CSV Exporter</h3>
+        <p class="text-gray-400">Multithreaded JDBC solution for large-scale data export without DB tweaks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-16 px-6 md:px-20 bg-gray-800" id="contact">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Contact</h2>
+    <div class="text-center space-y-4">
+      <p>Email: <a href="mailto:your.email@example.com" class="text-indigo-400 hover:underline">your.email@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/himanshukt" target="_blank" class="text-indigo-400 hover:underline">github.com/himanshukt</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank" class="text-indigo-400 hover:underline">linkedin.com/in/your-profile</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-center text-gray-500">
+    © 2025 Himanshu Kumar. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>
