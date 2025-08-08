@@ -1,52 +1,106 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>himanshu kumar</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Himanshu Kumar - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-    
-<body style="background-color: rgb(226, 224, 224);">
-    <header class="header">
-        <nav class="navbar navbar-style">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="micon">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li> <a href="">Home</a> </li>
-                        <li> <a href="">Aboutme</a> </li>
-                        <li> <a href="mywork.html">MyWork</a> </li>
-                        <li> <a href="">Feedback</a> </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>    
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <p class="big-text">Himanshu Kumar</p>
-                <p>Software Developer | Competitive Programmer</p>
-                <a class="btn btn-first" href="Himanshu_Resume_Softwate_Engineer.pdf">Download CV</a>
-                <p class="contact-me">Contact Me</p>
-                    <ul class="cont">
-                        <li> himanshukumar52525@gmail.com</li>
-                        <li> +91-9903977922</li>
-                        <li> Hyderabad,Telangana</li>
-                    </ul>      
-            </div>
-            <div class="col-sm-6">
-                <img src="intview.png" class="img-responsive">
-            </div>
-        </div>
+<body class="bg-gray-900 text-white">
+
+  <!-- Hero -->
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-800 to-gray-900">
+    <img src="images/aboutme.jpg" alt="Profile" class="w-32 h-32 rounded-full border-4 border-indigo-500 mb-6" data-aos="zoom-in">
+    <h1 class="text-4xl font-bold mb-2" data-aos="fade-up">Himanshu Kumar</h1>
+    <p class="text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">Senior Java Backend Developer</p>
+    <a href="#projects" class="mt-6 px-6 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-full text-white font-semibold" data-aos="fade-up" data-aos-delay="200">View My Work</a>
+  </section>
+
+  <!-- About -->
+  <section class="py-16 px-6 md:px-20 bg-gray-800" id="about">
+    <h2 class="text-3xl font-bold mb-6 text-center" data-aos="fade-up">About Me</h2>
+    <p class="max-w-3xl mx-auto text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+      Experienced backend engineer with expertise in Java 21, Spring Boot, Oracle DB, Elasticsearch, and distributed systems. 
+      Skilled in designing high-performance APIs, migrating legacy systems, and optimizing large-scale data operations. 
+      Proven track record with FASTag & PH platforms, Oracle CSV export of 90M+ records, SFTP utilities, Drools-based rule engines, and secure PGP encryption workflows.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="py-16 px-6 md:px-20 bg-gray-900" id="skills">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up">Java 21</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="50">Spring Boot</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="100">Oracle DB</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="150">Elasticsearch</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="200">Docker</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="250">SFTP (Apache MINA)</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="300">PGP Encryption</div>
+      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="350">Drools Engine</div>
     </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="py-16 px-6 md:px-20 bg-gray-800" id="experience">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Experience</h2>
+    <div class="space-y-8 max-w-3xl mx-auto">
+      <div data-aos="fade-up">
+        <h3 class="text-xl font-semibold">FASTag & PH Platform Development</h3>
+        <p class="text-gray-400">Migrated core systems to Java 21, implemented Vahan-based Tag Issuance, VRN history download, and DA processing.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold">Oracle Data Export</h3>
+        <p class="text-gray-400">Optimized batch data extraction of 90M+ records using JDBC multithreading & memory-safe streaming.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold">SFTP & File Processing</h3>
+        <p class="text-gray-400">Developed production-grade SFTP utilities with Apache MINA SSHD for secure large file transfers.</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-semibold">Rule Engine Integration</h3>
+        <p class="text-gray-400">Implemented Drools for externalized fare calculation and flexible business rules management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="py-16 px-6 md:px-20 bg-gray-900" id="projects">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up">
+        <img src="https://himanshukt.github.io/images/fastag.jpg" alt="FASTag" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">FASTag System Migration</h3>
+        <p class="text-gray-400">Upgraded platform to Java 21, optimized for high transaction throughput (500+ RPS).</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://himanshukt.github.io/images/oracle_export.jpg" alt="Oracle Export" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold">Oracle CSV Exporter</h3>
+        <p class="text-gray-400">Multithreaded JDBC solution for large-scale data export without DB tweaks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-16 px-6 md:px-20 bg-gray-800" id="contact">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Contact</h2>
+    <div class="text-center space-y-4">
+      <p>Email: <a href="mailto:himanshukt01@gmail.com" class="text-indigo-400 hover:underline">himanshukt01@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/himanshukt" target="_blank" class="text-indigo-400 hover:underline">github.com/himanshukt</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/himanshukt/" target="_blank" class="text-indigo-400 hover:underline">linkedin.com/in/himanshukt</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-center text-gray-500">
+    © 2025 Himanshu Kumar. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>
