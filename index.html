@@ -2,105 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Himanshu Kumar - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Fullscreen particle container */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, #0f172a, #1e293b);
+      z-index: -1;
+    }
+    /* Fade-in animation for hero content */
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white font-sans">
 
-  <!-- Hero -->
-  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-800 to-gray-900">
-    <img src="images/aboutme.jpg" alt="Profile" class="w-32 h-32 rounded-full border-4 border-indigo-500 mb-6" data-aos="zoom-in">
-    <h1 class="text-4xl font-bold mb-2" data-aos="fade-up">Himanshu Kumar</h1>
-    <p class="text-lg text-gray-300" data-aos="fade-up" data-aos-delay="100">Senior Java Backend Developer</p>
-    <a href="#projects" class="mt-6 px-6 py-3 bg-indigo-500 hover:bg-indigo-600 rounded-full text-white font-semibold" data-aos="fade-up" data-aos-delay="200">View My Work</a>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+    <div id="particles-js"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="relative z-10 fade-in-up">
+      <h1 class="text-5xl font-bold mb-4">Himanshu Kumar</h1>
+      <p class="text-xl mb-6">Senior Software Engineer | Experienced In Java & Spring Boot </p>
+      <div class="space-x-4">
+        <a href="#projects" class="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg text-lg transition">View Projects</a>
+        <a href="resume.pdf" download class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg text-lg transition">Download Resume</a>
+      </div>
+    </div>
   </section>
 
-  <!-- About -->
-  <section class="py-16 px-6 md:px-20 bg-gray-800" id="about">
-    <h2 class="text-3xl font-bold mb-6 text-center" data-aos="fade-up">About Me</h2>
-    <p class="max-w-3xl mx-auto text-gray-300 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-      Experienced backend engineer with expertise in Java 21, Spring Boot, Oracle DB, Elasticsearch, and distributed systems. 
-      Skilled in designing high-performance APIs, migrating legacy systems, and optimizing large-scale data operations. 
-      Proven track record with FASTag & PH platforms, Oracle CSV export of 90M+ records, SFTP utilities, Drools-based rule engines, and secure PGP encryption workflows.
+  <!-- About Section -->
+  <section class="py-16 max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+    <p class="text-lg leading-relaxed text-gray-300">
+      I am a passionate Java backend developer with <span id="experience-years"></span> years of experience, specializing in Java 21, Spring Boot, and enterprise-scale system design.
+      I have worked on FASTag & Payments platforms, Oracle data migration, high-performance APIs with Elasticsearch, secure file transfers via SFTP, and PGP encryption solutions.
     </p>
   </section>
 
-  <!-- Skills -->
-  <section class="py-16 px-6 md:px-20 bg-gray-900" id="skills">
-    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Skills</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up">Java 21</div>
-      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="50">Spring Boot</div>
-      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="100">Oracle DB</div>
-      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="150">Elasticsearch</div>
-      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="200">Docker</div>
-      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="250">SFTP (Apache MINA)</div>
-      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="300">PGP Encryption</div>
-      <div class="p-4 bg-gray-800 rounded-lg" data-aos="fade-up" data-aos-delay="350">Drools Engine</div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section class="py-16 px-6 md:px-20 bg-gray-800" id="experience">
-    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Experience</h2>
-    <div class="space-y-8 max-w-3xl mx-auto">
-      <div data-aos="fade-up">
-        <h3 class="text-xl font-semibold">FASTag & PH Platform Development</h3>
-        <p class="text-gray-400">Migrated core systems to Java 21, implemented Vahan-based Tag Issuance, VRN history download, and DA processing.</p>
-      </div>
-      <div data-aos="fade-up" data-aos-delay="100">
-        <h3 class="text-xl font-semibold">Oracle Data Export</h3>
-        <p class="text-gray-400">Optimized batch data extraction of 90M+ records using JDBC multithreading & memory-safe streaming.</p>
-      </div>
-      <div data-aos="fade-up" data-aos-delay="200">
-        <h3 class="text-xl font-semibold">SFTP & File Processing</h3>
-        <p class="text-gray-400">Developed production-grade SFTP utilities with Apache MINA SSHD for secure large file transfers.</p>
-      </div>
-      <div data-aos="fade-up" data-aos-delay="300">
-        <h3 class="text-xl font-semibold">Rule Engine Integration</h3>
-        <p class="text-gray-400">Implemented Drools for externalized fare calculation and flexible business rules management.</p>
+  <!-- Skills Section -->
+  <section class="py-16 bg-gray-800">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-gray-700 p-4 rounded-lg">Java 21</div>
+        <div class="bg-gray-700 p-4 rounded-lg">Spring Boot</div>
+        <div class="bg-gray-700 p-4 rounded-lg">Oracle DB</div>
+        <div class="bg-gray-700 p-4 rounded-lg">Docker</div>
+        <div class="bg-gray-700 p-4 rounded-lg">Elasticsearch</div>
+        <div class="bg-gray-700 p-4 rounded-lg">SFTP (Apache MINA / JSch)</div>
+        <div class="bg-gray-700 p-4 rounded-lg">PGP Encryption</div>
+        <div class="bg-gray-700 p-4 rounded-lg">Kafka</div>
+        <div class="bg-gray-700 p-4 rounded-lg">ELK</div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="py-16 px-6 md:px-20 bg-gray-900" id="projects">
-    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up">
-        <img src="https://himanshukt.github.io/images/fastag.jpg" alt="FASTag" class="rounded-lg mb-4">
-        <h3 class="text-xl font-semibold">FASTag System Migration</h3>
-        <p class="text-gray-400">Upgraded platform to Java 21, optimized for high transaction throughput (500+ RPS).</p>
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold mb-2">FASTag Platform Migration</h3>
+        <p class="text-gray-400">Migrated and optimized FASTag platform, implemented tag issuance with Vahan integration, and developed DA processing features.</p>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://himanshukt.github.io/images/oracle_export.jpg" alt="Oracle Export" class="rounded-lg mb-4">
-        <h3 class="text-xl font-semibold">Oracle CSV Exporter</h3>
-        <p class="text-gray-400">Multithreaded JDBC solution for large-scale data export without DB tweaks.</p>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold mb-2">Oracle CSV Exporter</h3>
+        <p class="text-gray-400">Exported 90M+ records efficiently using JDBC multithreading and optimized file writing.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold mb-2">Secure File Transfer Utility</h3>
+        <p class="text-gray-400">Built large file transfer utilities over SFTP with Apache MINA and JSch for production environments.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold mb-2">PGP Encryption Service</h3>
+        <p class="text-gray-400">Preloaded public keys for encryption to handle 500+ req/sec, improving security and throughput.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="py-16 px-6 md:px-20 bg-gray-800" id="contact">
-    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Contact</h2>
-    <div class="text-center space-y-4">
-      <p>Email: <a href="mailto:himanshukt01@gmail.com" class="text-indigo-400 hover:underline">himanshukt01@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/himanshukt" target="_blank" class="text-indigo-400 hover:underline">github.com/himanshukt</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/himanshukt/" target="_blank" class="text-indigo-400 hover:underline">linkedin.com/in/himanshukt</a></p>
+  <!-- Contact Section -->
+  <section class="py-16 bg-gray-800">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-4">
+      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+      <div class="text-center space-y-4">
+        <p>Email: <a href="mailto:himanshukt01@gmail.com" class="text-indigo-400 hover:underline">himanshukt01@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/himanshukt" target="_blank" class="text-indigo-400 hover:underline">github.com/himanshukt</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/himanshukt/" target="_blank" class="text-indigo-400 hover:underline">linkedin.com/in/himanshukt</a></p>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-6 bg-gray-900 text-center text-gray-500">
-    © 2025 Himanshu Kumar. All rights reserved.
+  <footer class="py-6 text-center bg-gray-900 text-gray-500">
+    &copy; <span id="year"></span> Himanshu Kumar. All rights reserved.
   </footer>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true });
+    // Dynamic Experience Years
+    const startDate = new Date("June 2019");
+    const today = new Date();
+    const diffYears = ((today - startDate) / (1000 * 60 * 60 * 24 * 365)).toFixed(1);
+    document.getElementById("experience-years").textContent = diffYears;
+
+    // Dynamic Current Year
+    document.getElementById("year").textContent = today.getFullYear();
+
+    // Particles.js Config
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 40, "density": { "enable": true, "value_area": 800 }},
+        "color": { "value": "#00ffff" },
+        "shape": { "type": "triangle", "stroke": { "width": 0, "color": "#000000" }},
+        "opacity": { "value": 0.3, "random": true },
+        "size": { "value": 4, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#00ffff", "opacity": 0.2, "width": 1 },
+        "move": { "enable": true, "speed": 1.2, "random": true, "straight": false, "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": { "onhover": { "enable": true, "mode": "grab" }, "resize": true },
+        "modes": { "grab": { "distance": 150, "line_linked": { "opacity": 0.5 } } }
+      },
+      "retina_detect": true
+    });
   </script>
 </body>
 </html>
