@@ -1,9 +1,9 @@
-package com.airtelbank.netcacquiringbatch.service.impl;
+package com.example.service.impl;
 
-import com.airtelbank.netcacquiringbatch.constant.NetcAcqConstant;
-import com.airtelbank.netcacquiringbatch.entity.InitFileDetails;
-import com.airtelbank.netcacquiringbatch.enums.NetcAcqErrorCode;
-import com.airtelbank.netcacquiringbatch.exceptions.ServiceException;
+import com.example.constant.NetcAcqConstant;
+import com.example.entity.InitFileDetails;
+import com.example.enums.NetcAcqErrorCode;
+import com.example.exceptions.ServiceException;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Value;
@@ -48,7 +48,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *   <li>Progress tracking and performance metrics logging</li>
  * </ul>
  * 
- * @author Himanshu Kumar (B0222730)
+ * @author Himanshu Kumar 
  * @since 18/09/25
  */
 @Service
