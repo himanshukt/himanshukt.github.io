@@ -1,140 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Himanshu Kumar - Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Fullscreen particle container */
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom right, #0f172a, #1e293b);
-      z-index: -1;
-    }
-    /* Fade-in animation for hero content */
-    @keyframes fadeInUp {
-      0% {opacity: 0; transform: translateY(20px);}
-      100% {opacity: 1; transform: translateY(0);}
-    }
-    .fade-in-up {
-      animation: fadeInUp 1s ease-out forwards;
-    }
-  </style>
-</head>
-<body class="bg-gray-900 text-white font-sans">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Himanshu Kumar - Portfolio</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			/* Fullscreen particle container */
+			#particles-js {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(to bottom right, #0f172a, #1e293b);
+				z-index: -1;
+			}
+			/* Fade-in animation for hero content */
+			@keyframes fadeInUp {
+				0% { opacity: 0; transform: translateY(20px); }
+				100% { opacity: 1; transform: translateY(0); }
+			}
+			.fade-in-up {
+				animation: fadeInUp 1s ease-out forwards;
+			}
+		</style>
+	</head>
+	<body class="bg-gray-900 text-white font-sans antialiased">
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
-    <div id="particles-js"></div>
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-    <div class="relative z-10 fade-in-up">
-      <h1 class="text-5xl font-bold mb-4">Himanshu Kumar</h1>
-      <p class="text-xl mb-6">Senior Software Engineer | Experienced in Java & Spring Boot</p>
-      <div class="space-x-4">
-        <a href="#projects" class="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-lg text-lg transition">View Projects</a>
-        <a href="resume.pdf" download class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg text-lg transition">Download Resume</a>
-      </div>
-    </div>
-  </section>
+		<!-- Hero Section -->
+		<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+			<div id="particles-js"></div>
+			<div class="absolute inset-0 bg-black bg-opacity-40"></div>
+			<div class="relative z-10 fade-in-up">
+				<h1 class="text-5xl font-bold mb-4">Himanshu Kumar</h1>
+				<p class="text-xl text-gray-300 mb-6">Senior Software Engineer | Experienced In Java & Spring Boot</p>
+				<div class="space-x-4">
+					<a href="#projects" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg text-lg font-medium transition inline-block">View Projects</a>
+					<a href="resume.pdf" download class="bg-emerald-600 hover:bg-emerald-700 px-6 py-3 rounded-lg text-lg font-medium transition inline-block">Download Resume</a>
+				</div>
+			</div>
+		</section>
 
-  <!-- About Section -->
-  <section class="py-16 max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-    <p class="text-lg leading-relaxed text-gray-300">
-      I am a passionate Java backend developer with <span id="experience-years"></span> years of experience, specializing in Java 21, Spring Boot, and enterprise-scale system design.
-      I have worked on FASTag & PH platforms, Oracle data migration, high-performance APIs with Elasticsearch, secure file transfers via SFTP, and PGP encryption solutions.
-    </p>
-  </section>
+		<!-- About Section -->
+		<section class="py-16 max-w-4xl mx-auto px-6">
+			<h2 class="text-3xl font-bold mb-6 text-center border-b-2 border-indigo-500 pb-2 w-max mx-auto">About Me</h2>
+			<p class="text-lg leading-relaxed text-gray-300 text-center md:text-left">
+				I am a passionate Java backend developer with <span id="experience-years" class="font-semibold text-indigo-400"></span> years of experience, specializing in Java 21, Spring Boot, and enterprise-scale system design.
+				I have worked on FASTag & Payments platforms, Oracle data migration, high-performance APIs with Elasticsearch, secure file transfers via SFTP, and PGP encryption solutions.
+			</p>
+		</section>
 
-  <!-- Skills Section -->
-  <section class="py-16 bg-gray-800">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="bg-gray-700 p-4 rounded-lg">Java 21</div>
-        <div class="bg-gray-700 p-4 rounded-lg">Spring Boot</div>
-        <div class="bg-gray-700 p-4 rounded-lg">Oracle DB</div>
-        <div class="bg-gray-700 p-4 rounded-lg">Docker</div>
-        <div class="bg-gray-700 p-4 rounded-lg">Elasticsearch</div>
-        <div class="bg-gray-700 p-4 rounded-lg">SFTP (Apache MINA / JSch)</div>
-        <div class="bg-gray-700 p-4 rounded-lg">PGP Encryption</div>
-        <div class="bg-gray-700 p-4 rounded-lg">Drools Rule Engine</div>
-      </div>
-    </div>
-  </section>
+		<!-- Skills Section -->
+		<section class="py-16 bg-gray-800">
+			<div class="max-w-6xl mx-auto px-6">
+				<h2 class="text-3xl font-bold mb-10 text-center border-b-2 border-indigo-500 pb-2 w-max mx-auto">Skills & Technical Expertise</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					
+					<!-- Java 21 -->
+					<div class="bg-gray-700/60 p-6 rounded-lg border border-gray-600/50 hover:border-indigo-500 transition duration-300 shadow-md">
+						<h3 class="text-xl font-bold text-indigo-400 mb-2">Java 21</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">
+							Leveraging modern features like Virtual Threads, Pattern Matching, and Record Patterns to build high-concurrency, memory-efficient enterprise applications.
+						</p>
+					</div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-16 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-bold mb-2">FASTag Platform Migration</h3>
-        <p class="text-gray-400">Migrated and optimized FASTag platform, implemented tag issuance with Vahan integration, and developed DA processing features.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-bold mb-2">Oracle CSV Exporter</h3>
-        <p class="text-gray-400">Exported 90M+ records efficiently using JDBC multithreading and optimized file writing.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-bold mb-2">Secure File Transfer Utility</h3>
-        <p class="text-gray-400">Built large file transfer utilities over SFTP with Apache MINA and JSch for production environments.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <h3 class="text-xl font-bold mb-2">PGP Encryption Service</h3>
-        <p class="text-gray-400">Preloaded public keys for encryption to handle 500+ req/sec, improving security and throughput.</p>
-      </div>
-    </div>
-  </section>
+					<!-- Spring Boot -->
+					<div class="bg-gray-700/60 p-6 rounded-lg border border-gray-600/50 hover:border-indigo-500 transition duration-300 shadow-md">
+						<h3 class="text-xl font-bold text-indigo-400 mb-2">Spring Boot</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">
+							Designing robust microservices, RESTful APIs, custom security configurations, and enterprise-grade backend services structured for maintainability and scale.
+						</p>
+					</div>
 
-  <!-- Contact Section -->
-  <section class="py-16 bg-gray-800">
-    <div class="max-w-4xl mx-auto px-6 text-center space-y-4">
-      <h2 class="text-3xl font-bold mb-6">Contact</h2>
-      <div class="text-center space-y-4">
-        <p>Email: <a href="mailto:himanshukt01@gmail.com" class="text-indigo-400 hover:underline">himanshukt01@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/himanshukt" target="_blank" class="text-indigo-400 hover:underline">github.com/himanshukt</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/himanshukt/" target="_blank" class="text-indigo-400 hover:underline">linkedin.com/in/himanshukt</a></p>
-      </div>
-    </div>
-  </section>
+					<!-- Oracle DB -->
+					<div class="bg-gray-700/60 p-6 rounded-lg border border-gray-600/50 hover:border-indigo-500 transition duration-300 shadow-md">
+						<h3 class="text-xl font-bold text-indigo-400 mb-2">Oracle DB</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">
+							Architecting relational database schemas, query optimization, and implementing multi-threaded batch operations for large-scale data extraction and migration.
+						</p>
+					</div>
 
-  <footer class="py-6 text-center bg-gray-900 text-gray-500">
-    &copy; <span id="year"></span> Himanshu Kumar. All rights reserved.
-  </footer>
+					<!-- Docker -->
+					<div class="bg-gray-700/60 p-6 rounded-lg border border-gray-600/50 hover:border-indigo-500 transition duration-300 shadow-md">
+						<h3 class="text-xl font-bold text-indigo-400 mb-2">Docker</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">
+							Containerizing backend services, standardizing environment setups, and configuring efficient Docker images for seamless CI/CD and deployment workflows.
+						</p>
+					</div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    // Dynamic Experience Years
-    const startDate = new Date("June 2019");
-    const today = new Date();
-    const diffYears = ((today - startDate) / (1000 * 60 * 60 * 24 * 365)).toFixed(1);
-    document.getElementById("experience-years").textContent = diffYears;
+					<!-- Elasticsearch -->
+					<div class="bg-gray-700/60 p-6 rounded-lg border border-gray-600/50 hover:border-indigo-500 transition duration-300 shadow-md">
+						<h3 class="text-xl font-bold text-indigo-400 mb-2">Elasticsearch</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">
+							Designing high-speed search indices and integrating full-text document search into backend microservices for low-latency data retrieval.
+						</p>
+					</div>
 
-    // Dynamic Current Year
-    document.getElementById("year").textContent = today.getFullYear();
+					<!-- SFTP (Apache MINA / JSch) -->
+					<div class="bg-gray-700/60 p-6 rounded-lg border border-gray-600/50 hover:border-indigo-500 transition duration-300 shadow-md">
+						<h3 class="text-xl font-bold text-indigo-400 mb-2">SFTP (Apache MINA / JSch)</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">
+							Building automated, resilient file transfer pipelines capable of securely transmitting massive data files across production servers.
+						</p>
+					</div>
 
-    // Particles.js Config
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 40, "density": { "enable": true, "value_area": 800 }},
-        "color": { "value": "#00ffff" },
-        "shape": { "type": "triangle", "stroke": { "width": 0, "color": "#000000" }},
-        "opacity": { "value": 0.3, "random": true },
-        "size": { "value": 4, "random": true },
-        "line_linked": { "enable": true, "distance": 150, "color": "#00ffff", "opacity": 0.2, "width": 1 },
-        "move": { "enable": true, "speed": 1.2, "random": true, "straight": false, "out_mode": "out" }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": { "onhover": { "enable": true, "mode": "grab" }, "resize": true },
-        "modes": { "grab": { "distance": 150, "line_linked": { "opacity": 0.5 } } }
-      },
-      "retina_detect": true
-    });
-  </script>
-</body>
+					<!-- PGP Encryption -->
+					<div class="bg-gray-700/60 p-6 rounded-lg border border-gray-600/50 hover:border-indigo-500 transition duration-300 shadow-md">
+						<h3 class="text-xl font-bold text-indigo-400 mb-2">PGP Encryption</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">
+							Implementing high-throughput cryptographic services with key preloading to securely handle sensitive payload processing at 500+ requests/sec.
+						</p>
+					</div>
+
+					<!-- Kafka -->
+					<div class="bg-gray-700/60 p-6 rounded-lg border border-gray-600/50 hover:border-indigo-500 transition duration-300 shadow-md">
+						<h3 class="text-xl font-bold text-indigo-400 mb-2">Apache Kafka</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">
+							Developing event-driven microservice architectures, asynchronous message queuing, and real-time data pipelines for high-volume message delivery.
+						</p>
+					</div>
+
+					<!-- ELK Stack -->
+					<div class="bg-gray-700/60 p-6 rounded-lg border border-gray-600/50 hover:border-indigo-500 transition duration-300 shadow-md">
+						<h3 class="text-xl font-bold text-indigo-400 mb-2">ELK Stack</h3>
+						<p class="text-gray-300 text-sm leading-relaxed">
+							Configuring log aggregation pipelines with Logstash and Kibana for real-time application monitoring, centralized debugging, and system visibility.
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="py-16 max-w-5xl mx-auto px-6">
+			<h2 class="text-3xl font-bold mb-10 text-center border-b-2 border-indigo-500 pb-2 w-max mx-auto">Featured Projects</h2>
+			<div class="grid md:grid-cols-2 gap-6">
+				<div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+					<h3 class="text-xl font-bold mb-2 text-indigo-300">FASTag Platform Migration</h3>
+					<p class="text-gray-400 text-sm leading-relaxed">Migrated and optimized the FASTag platform, implemented tag issuance with Vahan integration, and developed DA processing features.</p>
+				</div>
+				<div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+					<h3 class="text-xl font-bold mb-2 text-indigo-300">Oracle CSV Exporter</h3>
+					<p class="text-gray-400 text-sm leading-relaxed">Exported 90M+ records efficiently using JDBC multithreading, chunked reading, and optimized file writing pipelines.</p>
+				</div>
+				<div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+					<h3 class="text-xl font-bold mb-2 text-indigo-300">Secure File Transfer Utility</h3>
+					<p class="text-gray-400 text-sm leading-relaxed">Built large file transfer utilities over SFTP using Apache MINA and JSch libraries designed for enterprise production environments.</p>
+				</div>
+				<div class="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
+					<h3 class="text-xl font-bold mb-2 text-indigo-300">PGP Encryption Service</h3>
+					<p class="text-gray-400 text-sm leading-relaxed">Preloaded public keys for in-memory encryption handling 500+ req/sec, significantly boosting security and API throughput.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="py-16 bg-gray-800">
+			<div class="max-w-4xl mx-auto px-6 text-center space-y-4">
+				<h2 class="text-3xl font-bold mb-6 border-b-2 border-indigo-500 pb-2 w-max mx-auto">Get In Touch</h2>
+				<div class="text-center space-y-3 text-lg">
+					<p>Email: <a href="mailto:himanshukt01@gmail.com" class="text-indigo-400 hover:underline">himanshukt01@gmail.com</a></p>
+					<p>GitHub: <a href="https://github.com/himanshukt" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">github.com/himanshukt</a></p>
+					<p>LinkedIn: <a href="https://linkedin.com/in/himanshukt/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">linkedin.com/in/himanshukt</a></p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="py-6 text-center bg-gray-900 text-gray-500 text-sm">
+			&copy; <span id="year"></span> Himanshu Kumar. All rights reserved.
+		</footer>
+
+		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<script>
+			// Dynamic Experience Years Calculation
+			const startDate = new Date("June 2019");
+			const today = new Date();
+			const diffYears = ((today - startDate) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1);
+			document.getElementById("experience-years").textContent = diffYears;
+
+			// Dynamic Current Year
+			document.getElementById("year").textContent = today.getFullYear();
+
+			// Particles.js Configuration
+			particlesJS("particles-js", {
+				"particles": {
+					"number": { "value": 40, "density": { "enable": true, "value_area": 800 }},
+					"color": { "value": "#00ffff" },
+					"shape": { "type": "triangle", "stroke": { "width": 0, "color": "#000000" }},
+					"opacity": { "value": 0.3, "random": true },
+					"size": { "value": 4, "random": true },
+					"line_linked": { "enable": true, "distance": 150, "color": "#00ffff", "opacity": 0.2, "width": 1 },
+					"move": { "enable": true, "speed": 1.2, "random": true, "straight": false, "out_mode": "out" }
+				},
+				"interactivity": {
+					"detect_on": "canvas",
+					"events": { "onhover": { "enable": true, "mode": "grab" }, "resize": true },
+					"modes": { "grab": { "distance": 150, "line_linked": { "opacity": 0.5 } } }
+				},
+				"retina_detect": true
+			});
+		</script>
+	</body>
 </html>
